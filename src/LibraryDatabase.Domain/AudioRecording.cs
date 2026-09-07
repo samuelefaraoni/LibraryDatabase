@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LibraryDatabase.Domain
 {
-    public class AudioRecording : AbstractMedia
+    public class AudioRecording : Media
     {
         public string Format { get; init; }
         public string CatalogCode { get; init; }

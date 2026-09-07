@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LibraryDatabase.Domain
 {
-    public class Book : AbstractMedia
+    public class Book : Media
     {
         public string ISBN { get; init; }
 

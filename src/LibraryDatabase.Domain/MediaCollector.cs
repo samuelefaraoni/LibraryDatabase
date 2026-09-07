@@ -6,19 +6,19 @@ namespace LibraryDatabase.Domain
 {
     public class MediaCollector
     {
-        public List<AbstractMedia> Collector;
+        public List<Media> Collector;
 
         public MediaCollector()
         {
-            Collector = new List<AbstractMedia>();
+            Collector = new List<Media>();
         }
 
-        private void AddMedia(AbstractMedia media)
+        private void AddMedia(Media media)
         {
             Collector.Add(media);
         }
 
-        private void RemoveMedia(AbstractMedia media)
+        private void RemoveMedia(Media media)
         {
             Collector.Remove(media);
         }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LibraryDatabase.Domain
 {
-   public abstract class AbstractMedia
+   public abstract class Media
    {
         public string Name { get; init; }
         public string[] Author { get; init; }
@@ -14,7 +14,7 @@ namespace LibraryDatabase.Domain
         public string PublicationDate { get; init; }
         public string Publisher { get; init; }
 
-        public AbstractMedia(string name, string[] author, string[] genre, string[] language, string publicationDate, string publisher)
+        public Media(string name, string[] author, string[] genre, string[] language, string publicationDate, string publisher)
         {
             Name = name;
             Author = author;

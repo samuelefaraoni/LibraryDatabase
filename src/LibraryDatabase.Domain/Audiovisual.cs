@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LibraryDatabase.Domain
 {
-    public class Audiovisual : AbstractMedia
+    public class Audiovisual : Media
     {
         public Audiovisual(string name, string[] author, string[] genre, string[] language, string publicationDate, string publisher) : base(name, author, genre, language, publicationDate, publisher) {}
 
