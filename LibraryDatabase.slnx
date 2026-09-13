@@ -1,6 +1,8 @@
 <Solution>
   <Folder Name="/docs/" />
   <Folder Name="/src/">
+    <Project Path="src/LibraryDatabase.Application/LibraryDatabase.Application.csproj" Id="419fd402-3e4a-4285-a150-58e4a042671e" />
     <Project Path="src/LibraryDatabase.Domain/LibraryDatabase.Domain.csproj" />
+    <Project Path="src/LibraryDatabase.SharedKernel/LibraryDatabase.SharedKernel.csproj" Id="2cc85f97-5430-44eb-bc6b-70945b489a28" />
   </Folder>
 </Solution>
