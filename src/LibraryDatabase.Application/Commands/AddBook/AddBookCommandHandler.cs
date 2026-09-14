@@ -15,7 +15,7 @@ namespace LibraryDatabase.Application.Commands.AddMediaCommand
         public AddBookCommandHandler(IMediaRepository repository) => _repository = repository;
         public Task<Result> Handle(AddBookCommand request, CancellationToken cancellationToken)
         {
-            var book = new Book(request.name, request.author, request.genre, request.language, request.publicationDate, request.publisher, request.isbn);
+            var book = new Book(request.title, request.author, request.genre, request.language, request.publicationDate, request.publisher, request.isbn);
             var result = _repository.AddMedia(book);
             if (result.IsFailure)
                 return Task.FromResult(Result.Failure(result.Error));

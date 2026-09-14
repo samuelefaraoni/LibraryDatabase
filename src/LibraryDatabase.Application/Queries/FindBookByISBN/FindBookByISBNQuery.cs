@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace LibraryDatabase.Application.Queries.FindMediaByName
+namespace LibraryDatabase.Application.Queries.FindBookByISBN
 {
-    public sealed record FindMediaByGenreQuery(string name) : IRequest<Result<List<Media>>>;
+    public sealed record FindBookByISBNQuery(string isbn) : IRequest<Result<Book>>;
 }

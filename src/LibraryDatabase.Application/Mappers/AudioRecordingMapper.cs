@@ -6,13 +6,13 @@ using System.Text;
 
 namespace LibraryDatabase.Application.Mappers
 {
-    public static class AudioRecorrdingMapper
+    public static class AudioRecordingMapper
     {
         public static AudioRecordingDto ToDto(AudioRecording audioRecording)
         {
             return new AudioRecordingDto
             {
-                Name = audioRecording.Name,
+                Title = audioRecording.Title,
                 Author = audioRecording.Author,
                 Genre = audioRecording.Genre,
                 Language = audioRecording.Language,
@@ -26,7 +26,7 @@ namespace LibraryDatabase.Application.Mappers
         public static AudioRecording ToDomain(AudioRecordingDto dto)
         {
             return new AudioRecording(
-                dto.Name,
+                dto.Title,
                 dto.Author,
                 dto.Genre,
                 dto.Language,

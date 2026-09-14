@@ -15,7 +15,7 @@ namespace LibraryDatabase.Application.Commands.AddAudiovisual
         public AddAudiovisualCommandHandler(IMediaRepository repository) => _repository = repository;
         public Task<Result> Handle(AddAudiovisualCommand request, CancellationToken cancellationToken)
         {
-            var audiovisual = new Audiovisual(request.name, request.author, request.genre, request.language, request.publicationDate, request.publisher);
+            var audiovisual = new Audiovisual(request.title, request.author, request.genre, request.language, request.publicationDate, request.publisher);
             var result = _repository.AddMedia(audiovisual);
             if (result.IsFailure)
                 return Task.FromResult(Result.Failure(result.Error));

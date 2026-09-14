@@ -6,8 +6,8 @@ namespace LibraryDatabase.Application.Dto
 {
     public record BookDto
     {
-        public string Name { get; init; }
-        public string[] Author { get; init; }
+        public string Title { get; init; }
+        public string Author { get; init; }
         public string Genre { get; init; }
 
         public string Language { get; init; }

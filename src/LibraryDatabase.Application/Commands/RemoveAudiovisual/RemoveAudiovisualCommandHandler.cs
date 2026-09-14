@@ -16,11 +16,11 @@ namespace LibraryDatabase.Application.Commands.RemoveAudiovisual
 
         public async Task<Result> Handle(RemoveAudiovisualCommand request, CancellationToken cancellationToken)
         {
-            var check = _repository.IsMediaIntoList(new Audiovisual(request.name, request.author, request.genre, request.language, request.publicationDate, request.publisher));
+            var check = _repository.IsMediaIntoList(new Audiovisual(request.title, request.author, request.genre, request.language, request.publicationDate, request.publisher));
             if (check == false)
                 return Result.Failure(Error.Problem("Error", "Audiovisual not found"));
             else
-                _repository.RemoveMedia(new Audiovisual(request.name, request.author, request.genre, request.language, request.publicationDate, request.publisher));
+                _repository.RemoveMedia(new Audiovisual(request.title, request.author, request.genre, request.language, request.publicationDate, request.publisher));
             return Result.Success();
         }
     }

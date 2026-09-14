@@ -7,5 +7,5 @@ using System.Text;
 
 namespace LibraryDatabase.Application.Commands.AddMediaCommand
 {
-    public sealed record AddBookCommand(string name, string[] author, string genre, string language, string publicationDate, string publisher, string isbn) : IRequest<Result>;
+    public sealed record AddBookCommand(string title, string author, string genre, string language, string publicationDate, string publisher, string isbn) : IRequest<Result>;
 }

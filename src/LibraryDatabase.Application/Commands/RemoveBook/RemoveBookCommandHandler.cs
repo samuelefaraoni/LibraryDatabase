@@ -16,11 +16,11 @@ namespace LibraryDatabase.Application.Commands.RemoveMediaCommand
 
         public async Task<Result> Handle(RemoveBookCommand request, CancellationToken cancellationToken)
         {
-            var check = _repository.IsMediaIntoList(new Book(request.name, request.author, request.genre, request.language, request.publicationDate, request.publisher, request.isbn));
+            var check = _repository.IsMediaIntoList(new Book(request.title, request.author, request.genre, request.language, request.publicationDate, request.publisher, request.isbn));
             if (check == false)
                 return Result.Failure(Error.Problem("Error", "Book not found"));
             else
-                _repository.RemoveMedia(new Book(request.name, request.author, request.genre, request.language, request.publicationDate, request.publisher, request.isbn));
+                _repository.RemoveMedia(new Book(request.title, request.author, request.genre, request.language, request.publicationDate, request.publisher, request.isbn));
                 return Result.Success();
         }
     } 

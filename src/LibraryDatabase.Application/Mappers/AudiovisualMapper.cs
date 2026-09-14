@@ -12,7 +12,7 @@ namespace LibraryDatabase.Application.Mappers
         {
             return new AudiovisualDto
             {
-                Name = audiovisual.Name,
+                Title = audiovisual.Title,
                 Author = audiovisual.Author,
                 Genre = audiovisual.Genre,
                 Language = audiovisual.Language,
@@ -24,7 +24,7 @@ namespace LibraryDatabase.Application.Mappers
         public static Audiovisual ToDomain(AudiovisualDto dto)
         {
             return new Audiovisual(
-                dto.Name,
+                dto.Title,
                 dto.Author,
                 dto.Genre,
                 dto.Language,

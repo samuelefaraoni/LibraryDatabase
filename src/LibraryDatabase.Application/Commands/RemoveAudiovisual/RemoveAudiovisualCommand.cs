@@ -6,5 +6,5 @@ using System.Text;
 
 namespace LibraryDatabase.Application.Commands.RemoveAudiovisual
 {
-    public sealed record RemoveAudiovisualCommand(string name, string[] author, string genre, string language, string publicationDate, string publisher) : IRequest<Result>;
+    public sealed record RemoveAudiovisualCommand(string title, string author, string genre, string language, string publicationDate, string publisher) : IRequest<Result>;
 }

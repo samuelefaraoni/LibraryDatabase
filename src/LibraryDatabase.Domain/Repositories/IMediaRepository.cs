@@ -11,7 +11,7 @@ namespace LibraryDatabase.Domain.Repositories
         Result RemoveMedia(Media media);
         string GetMediaInfo(Media media);
         bool IsMediaIntoList(Media media);
-        List<Media> FindMediaByName(string name);
+        List<Media> FindMediaByTitle(string name);
         List<Media> FindMediaByAuthor(string author);
         List<Media> FindMediaByGenre(string genre);
         List<Media> FindMediaByLanguage(string language);

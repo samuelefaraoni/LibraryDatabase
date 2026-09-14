@@ -12,7 +12,7 @@ namespace LibraryDatabase.Application.Mappers
         {
             return new BookDto
             {
-                Name = book.Name,
+                Title = book.Title,
                 Author = book.Author,
                 Genre = book.Genre,
                 Language = book.Language,
@@ -25,7 +25,7 @@ namespace LibraryDatabase.Application.Mappers
         public static Book ToDomain(BookDto dto)
         {
             return new Book(
-                dto.Name,
+                dto.Title,
                 dto.Author,
                 dto.Genre,
                 dto.Language,

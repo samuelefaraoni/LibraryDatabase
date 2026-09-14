@@ -4,25 +4,25 @@ using System.Text;
 
 namespace LibraryDatabase.Domain
 {
-   public abstract class Media
+   public abstract record Media
    {
-        public string Name { get; init; }
-        public string[] Author { get; init; }
+        public string Title { get; init; }
+        public string Author { get; init; }
         public string Genre { get; init; }
 
         public string Language { get; init; }
         public string PublicationDate { get; init; }
         public string Publisher { get; init; }
 
-        public Media(string name, string[] author, string genre, string language, string publicationDate, string publisher)
+        public Media(string title, string author, string genre, string language, string publicationDate, string publisher)
         {
-            Name = name;
+            Title = title;
             Author = author;
             Genre = genre;
             Language = language; 
             PublicationDate = publicationDate;
             Publisher = publisher;
         }
-        public abstract string ReturnInfo();
+        public abstract string GetInfo();
     }
 }

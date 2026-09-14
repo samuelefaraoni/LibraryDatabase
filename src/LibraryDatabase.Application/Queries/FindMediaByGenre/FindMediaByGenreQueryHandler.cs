@@ -1,5 +1,4 @@
-﻿using LibraryDatabase.Application.Queries.FindMediaByName;
-using LibraryDatabase.Domain;
+﻿using LibraryDatabase.Domain;
 using LibraryDatabase.Domain.Repositories;
 using LibraryDatabase.SharedKernel;
 using MediatR;

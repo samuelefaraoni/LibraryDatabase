@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "LibraryDatabase.Domain": {
+      "commandName": "Project"
+    }
+  }
+}

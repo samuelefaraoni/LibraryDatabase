@@ -16,11 +16,11 @@ namespace LibraryDatabase.Application.Commands.RemoveAudioRecording
 
         public async Task<Result> Handle(RemoveAudioRecordingCommand request, CancellationToken cancellationToken)
         {
-            var check = _repository.IsMediaIntoList(new AudioRecording(request.name, request.author, request.genre, request.language, request.publicationDate, request.publisher, request.format, request.catalogCode));
+            var check = _repository.IsMediaIntoList(new AudioRecording(request.title, request.author, request.genre, request.language, request.publicationDate, request.publisher, request.format, request.catalogCode));
             if (check == false)
                 return Result.Failure(Error.Problem("Error", "Audio recording not found"));
             else
-                _repository.RemoveMedia(new AudioRecording(request.name, request.author, request.genre, request.language, request.publicationDate, request.publisher, request.format, request.catalogCode));
+                _repository.RemoveMedia(new AudioRecording(request.title, request.author, request.genre, request.language, request.publicationDate, request.publisher, request.format, request.catalogCode));
             return Result.Success();
         }
     }

@@ -4,13 +4,13 @@ using System.Text;
 
 namespace LibraryDatabase.Domain
 {
-    public class Audiovisual : Media
+    public record Audiovisual : Media
     {
-        public Audiovisual(string name, string[] author, string genre, string language, string publicationDate, string publisher) : base(name, author, genre, language, publicationDate, publisher) {}
+        public Audiovisual(string title, string author, string genre, string language, string publicationDate, string publisher) : base(title, author, genre, language, publicationDate, publisher) {}
 
-        public override string ReturnInfo()
+        public override string GetInfo()
         {
-            return ($"Name: {Name}\nAuthor: {Author}\nGenre: {Genre}\nLanguage: {Language}\nPublication Date: {PublicationDate}\nPublisher: {Publisher}");
+            return ($"Title: {Title}\nAuthor: {Author}\nGenre: {Genre}\nLanguage: {Language}\nPublication Date: {PublicationDate}\nPublisher: {Publisher}");
         }
     }
 }

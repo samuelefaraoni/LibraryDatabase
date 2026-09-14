@@ -1,8 +1,11 @@
 <Solution>
+  <Folder Name="/data/" />
   <Folder Name="/docs/" />
   <Folder Name="/src/">
     <Project Path="src/LibraryDatabase.Application/LibraryDatabase.Application.csproj" Id="419fd402-3e4a-4285-a150-58e4a042671e" />
+    <Project Path="src/LibraryDatabase.ConsoleInterface/LibraryDatabase.ConsoleInterface.csproj" Id="d3747d71-424e-4078-9922-0c752b7b231f" />
     <Project Path="src/LibraryDatabase.Domain/LibraryDatabase.Domain.csproj" />
+    <Project Path="src/LibraryDatabase.Infrastructure/LibraryDatabase.Infrastructure.csproj" Id="c90ae280-7f36-4efd-9c16-f621d941ae57" />
     <Project Path="src/LibraryDatabase.SharedKernel/LibraryDatabase.SharedKernel.csproj" Id="2cc85f97-5430-44eb-bc6b-70945b489a28" />
   </Folder>
 </Solution>

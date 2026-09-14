@@ -28,6 +28,11 @@ namespace LibraryDatabase.Domain
             else return Result.Failure(Error.NotFound("404", "Media not found"));
         }
 
+        public string GetMediaInfo(Media media)
+        {
+            return media.GetInfo();
+        }
+
         public bool IsMediaIntoList(Media media)
         {
             if (Collector.Contains(media))
@@ -35,16 +40,16 @@ namespace LibraryDatabase.Domain
             else return false;
         }
 
-        public List<Media> FindMediaByName(string name)
+        public List<Media> FindMediaByTitle(string name)
         {
             try
             {
-                var foundMedia = Collector.FindAll(x => x.Name.Contains(name));
+                var foundMedia = Collector.FindAll(x => x.Title.Contains(name));
                 return foundMedia;
             }
             catch(ArgumentNullException)
             {
-                Console.WriteLine("No result matches the inserted name");
+                Console.WriteLine("No result matches the inserted title");
                 return null;
             }
         }

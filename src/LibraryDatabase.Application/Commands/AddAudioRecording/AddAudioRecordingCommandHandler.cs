@@ -15,7 +15,7 @@ namespace LibraryDatabase.Application.Commands.AddAudioRecording
         public AddAudioRecordingCommandHandler(IMediaRepository repository) => _repository = repository;
         public Task<Result> Handle(AddAudioRecordingCommand request, CancellationToken cancellationToken)
         {
-            var audioRecording = new AudioRecording(request.name, request.author, request.genre, request.language, request.publicationDate, request.publisher, request.format, request.catalogCode);
+            var audioRecording = new AudioRecording(request.title, request.author, request.genre, request.language, request.publicationDate, request.publisher, request.format, request.catalogCode);
             var result = _repository.AddMedia(audioRecording);
             if (result.IsFailure)
                 return Task.FromResult(Result.Failure(result.Error));

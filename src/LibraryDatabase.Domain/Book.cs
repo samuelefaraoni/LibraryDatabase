@@ -4,18 +4,20 @@ using System.Text;
 
 namespace LibraryDatabase.Domain
 {
-    public class Book : Media
+    public record Book : Media
     {
         public string ISBN { get; init; }
 
-        public Book(string name, string[] author, string genre, string language, string publicationDate, string publisher, string isbn) : base(name, author, genre, language, publicationDate, publisher)
+        public Book(string title, string author, string genre, string language, string publicationDate, string publisher, string isbn) : base(title, author, genre, language, publicationDate, publisher)
         {
             ISBN = isbn;
         }
 
-        public override string ReturnInfo()
+        public override string GetInfo()
         {
-            return ($"Name: {Name}\nAuthor: {Author}\nGenre: {Genre}\nLanguage: {Language}\nPublication Date: {PublicationDate}\nPublisher: {Publisher}\nISBN: {ISBN}");
+            return ($"Title: {Title}\nAuthor: {Author}\nGenre: {Genre}\nLanguage: {Language}\nPublication Date: {PublicationDate}\nPublisher: {Publisher}\nISBN: {ISBN}");
         }
+
+        
     }
 }

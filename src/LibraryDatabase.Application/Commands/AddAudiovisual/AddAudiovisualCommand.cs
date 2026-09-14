@@ -6,5 +6,5 @@ using System.Text;
 
 namespace LibraryDatabase.Application.Commands.AddAudiovisual
 {
-    public sealed record AddAudiovisualCommand(string name, string[] author, string genre, string language, string publicationDate, string publisher) : IRequest<Result>;
+    public sealed record AddAudiovisualCommand(string title, string author, string genre, string language, string publicationDate, string publisher) : IRequest<Result>;
 }
